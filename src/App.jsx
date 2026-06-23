@@ -288,6 +288,24 @@ function App() {
         </div>
       </section>
 
+      {/* DMCA & Copyright Disclaimer Section */}
+      <section id="dmca" className="features" style={{ padding: '3rem 0', background: '#f0f2f5' }}>
+        <div className="container">
+          <div className="glass-panel" style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem', background: '#ffffff', borderLeft: '4px solid #4facfe', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textAlign: 'left' }}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#333' }}>DMCA & Copyright Disclaimer</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              Vibeflow is an open audio streaming platform built for promotional and non-commercial purposes. <strong>We do not host, upload, or store any audio files (e.g., mp3) on our servers.</strong> All music is aggregated and streamed via public third-party APIs.
+            </p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              We respect the intellectual property rights of others and comply with the Digital Millennium Copyright Act (DMCA). If you are a copyright owner and believe that any content provided through our platform infringes upon your copyrights, please submit a takedown request.
+            </p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', margin: 0 }}>
+              <strong>Content Removal Request:</strong> Please contact us at <a href="mailto:astraardency@gmail.com" style={{ color: '#4facfe', textDecoration: 'none', fontWeight: 'bold' }}>astraardency@gmail.com</a> with the content details. We will promptly remove or disable access to the infringing material.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="footer" style={{ padding: '4rem 0 2rem', background: '#0a0a0a', color: '#fff' }}>
         <div className="container">
@@ -310,6 +328,9 @@ function App() {
               <h4 style={{ marginBottom: '1rem', fontSize: '1.2rem', color: '#fff' }}>Support & Legal</h4>
               <p style={{ color: '#a0a0a0', fontSize: '0.95rem', marginBottom: '0.8rem' }}>
                 Email: <a href="mailto:astraardency@gmail.com" style={{ color: '#4facfe', textDecoration: 'none' }}>astraardency@gmail.com</a>
+              </p>
+              <p style={{ color: '#a0a0a0', fontSize: '0.95rem', marginBottom: '0.8rem' }}>
+                <a href="#dmca" style={{ color: '#a0a0a0', textDecoration: 'none' }}>DMCA & Copyright Policy</a>
               </p>
               <p style={{ color: '#a0a0a0', fontSize: '0.95rem', marginBottom: '0.8rem' }}>
                 <a href="#" style={{ color: '#a0a0a0', textDecoration: 'none' }}>Privacy Policy</a>
