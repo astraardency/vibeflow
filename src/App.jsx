@@ -76,7 +76,7 @@ function App() {
         <div className="container hero-content">
           <div className="hero-text animate-fade-up">
             <h1>Feel the Music, <span className="gradient-text">Find your Vibe.</span></h1>
-            <p>Welcome to Vibeflow – a completely free, seamless, and ad-free Open Audio streaming experience. Dive into over 7,600+ preloaded tracks across Tamil and English hits.</p>
+            <p>Welcome to Vibeflow – a completely free, seamless, and ad-free Open Audio streaming experience. Dive into all language songs available up-to-date.</p>
             
             <div className="hero-actions">
               <a href="/vibeflow-app.apk" download className="btn btn-primary">
@@ -118,7 +118,7 @@ function App() {
             <div className="glass-panel feature-card animate-fade-up delay-1">
               <div className="feature-icon"><Music size={32} /></div>
               <h3>Massive Offline-Ready Library</h3>
-              <p>Enjoy over 7,600+ preloaded songs out of the box, spanning across Tamil and English hits.</p>
+              <p>Enjoy all language songs available up-to-date out of the box.</p>
             </div>
             
             <div className="glass-panel feature-card animate-fade-up delay-2">
@@ -231,7 +231,7 @@ function App() {
             </div>
             <div className="glass-panel animate-fade-up" style={{ padding: '1.5rem' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>How do I report a problem?</h3>
-              <p style={{ color: 'var(--text-muted)', margin: 0 }}>Use the Contact Support section in the app to send us your feedback or email us directly at astraardency@gmail.com!</p>
+              <p style={{ color: 'var(--text-muted)', margin: 0 }}>Use the Contact Support section in the app to send us your feedback or email us directly at pradeepkumarcb18s@gmail.com!</p>
             </div>
           </div>
         </div>
@@ -245,7 +245,7 @@ function App() {
             <p>We'd love to hear your feedback or ideas.</p>
           </div>
           <div className="glass-panel animate-fade-up delay-1" style={{ maxWidth: '600px', margin: '0 auto', padding: '2.5rem', textAlign: 'left', background: '#f8f9fa' }}>
-            <form action="mailto:astraardency@gmail.com" method="GET" encType="text/plain" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <form action="mailto:pradeepkumarcb18s@gmail.com" method="GET" encType="text/plain" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Your Name</label>
                 <input type="text" placeholder="Enter your name" style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #ddd' }} required />
@@ -300,7 +300,7 @@ function App() {
               We respect the intellectual property rights of others and comply with the Digital Millennium Copyright Act (DMCA). If you are a copyright owner and believe that any content provided through our platform infringes upon your copyrights, please submit a takedown request.
             </p>
             <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', margin: 0 }}>
-              <strong>Content Removal Request:</strong> Please contact us at <a href="mailto:astraardency@gmail.com" style={{ color: '#4facfe', textDecoration: 'none', fontWeight: 'bold' }}>astraardency@gmail.com</a> with the content details. We will promptly remove or disable access to the infringing material.
+              <strong>Content Removal Request:</strong> Please contact us at <a href="mailto:pradeepkumarcb18s@gmail.com" style={{ color: '#4facfe', textDecoration: 'none', fontWeight: 'bold' }}>pradeepkumarcb18s@gmail.com</a> with the content details. We will promptly remove or disable access to the infringing material.
             </p>
           </div>
         </div>
@@ -327,7 +327,7 @@ function App() {
             <div>
               <h4 style={{ marginBottom: '1rem', fontSize: '1.2rem', color: '#fff' }}>Support & Legal</h4>
               <p style={{ color: '#a0a0a0', fontSize: '0.95rem', marginBottom: '0.8rem' }}>
-                Email: <a href="mailto:astraardency@gmail.com" style={{ color: '#4facfe', textDecoration: 'none' }}>astraardency@gmail.com</a>
+                Email: <a href="mailto:pradeepkumarcb18s@gmail.com" style={{ color: '#4facfe', textDecoration: 'none' }}>pradeepkumarcb18s@gmail.com</a>
               </p>
               <p style={{ color: '#a0a0a0', fontSize: '0.95rem', marginBottom: '0.8rem' }}>
                 <a href="#dmca" style={{ color: '#a0a0a0', textDecoration: 'none' }}>DMCA & Copyright Policy</a>
