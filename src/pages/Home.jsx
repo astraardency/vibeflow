@@ -17,7 +17,7 @@ export default function Home() {
         <div className="hero-bg"></div>
         <div className="container hero-content">
           <div className="hero-text animate-fade-up">
-            <h1>Feel the Music, <span className="gradient-text">Find your Vibe.</span></h1>
+            <h1>Feel the Music <span className="gradient-text">Find your Vibe.</span></h1>
             <p>Welcome to Vibeflow – a completely free, seamless, and open audio streaming experience. Dive into all language songs available up-to-date.</p>
             
             <div className="hero-actions">

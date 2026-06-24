@@ -1,19 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, ArrowUp } from 'lucide-react';
+import { Menu, X, ArrowUp } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Layout({ children }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    if (localStorage.getItem('vibeflow-theme') === 'dark') {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setIsDarkMode(true);
-      document.body.classList.add('dark-theme');
-    }
     const handleScroll = () => setShowScrollTop(window.scrollY > 300);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -27,17 +21,7 @@ export default function Layout({ children }) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const toggleTheme = () => {
-    if (isDarkMode) {
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('vibeflow-theme', 'light');
-      setIsDarkMode(false);
-    } else {
-      document.body.classList.add('dark-theme');
-      localStorage.setItem('vibeflow-theme', 'dark');
-      setIsDarkMode(true);
-    }
-  };
+
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -55,14 +39,8 @@ export default function Layout({ children }) {
             <Link to="/about" style={{ textDecoration: 'none', color: 'var(--text-main)', fontWeight: '600' }}>About Us</Link>
             <Link to="/download" style={{ textDecoration: 'none', color: 'var(--text-main)', fontWeight: '600' }}>Download</Link>
             <Link to="/contact" style={{ textDecoration: 'none', color: 'var(--text-main)', fontWeight: '600' }}>Contact</Link>
-            <button onClick={toggleTheme} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-main)', display: 'flex', alignItems: 'center', marginLeft: '1rem' }} aria-label="Toggle Theme">
-              {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
-            </button>
           </div>
           <div className="mobile-menu-btn" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <button onClick={toggleTheme} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-main)', display: 'flex', alignItems: 'center' }}>
-              {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
-            </button>
             <div onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ cursor: 'pointer', color: 'var(--text-main)' }}>
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </div>
