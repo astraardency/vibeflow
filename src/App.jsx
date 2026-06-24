@@ -101,6 +101,9 @@ function App() {
         </div>
       </section>
 
+      {/* Ad: Native Banner */}
+      <AdsterraAd type="native" />
+
       {/* Features Section */}
       <section id="features" className="features">
         <div className="container">

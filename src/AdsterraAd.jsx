@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
-export default function AdsterraAd({ adKey, width, height }) {
-  const htmlContent = `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <style>
-          body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; background: transparent; overflow: hidden; }
-        </style>
-      </head>
-      <body>
-        <script>
-          var atOptions = {
-            'key' : '${adKey}',
-            'format' : 'iframe',
-            'height' : ${height},
-            'width' : ${width},
-            'params' : {}
-          };
-        </script>
-        <script src="https://www.highperformanceformat.com/${adKey}/invoke.js"></script>
-      </body>
-    </html>
-  `;
+export default function AdsterraAd({ type, width, height }) {
+  const nativeRef = useRef(null);
 
+  // Render Native Banner using direct DOM injection
+  useEffect(() => {
+    if (type === 'native') {
+      if (!nativeRef.current) return;
+      if (nativeRef.current.querySelector('script')) return; // Prevent duplicates
+
+      const script = document.createElement("script");
+      script.async = true;
+      script.setAttribute("data-cfasync", "false");
+      script.src = "https://pl29879136.effectivecpmnetwork.com/8455a8683ada6701da13e3ed06fd93f9/invoke.js";
+      
+      nativeRef.current.appendChild(script);
+    }
+  }, [type]);
+
+  if (type === 'native') {
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '20px auto', width: '100%' }}>
+        <div id="container-8455a8683ada6701da13e3ed06fd93f9" ref={nativeRef}></div>
+      </div>
+    );
+  }
+
+  // Render Standard Banners using standalone static HTML files via iframe src
   return (
     <div
       className="ad-container"
@@ -39,7 +41,7 @@ export default function AdsterraAd({ adKey, width, height }) {
     >
       <iframe
         title={`Ad-${width}x${height}`}
-        srcDoc={htmlContent}
+        src={`/ad-${width}x${height}.html`}
         width={width}
         height={height}
         frameBorder="0"
