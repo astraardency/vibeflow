@@ -1,5 +1,5 @@
-import React from 'react';
-import { Download, Share2, Music, Zap, Shield, Heart } from 'lucide-react';
+
+import { Download, Zap, Shield, Heart } from 'lucide-react';
 import SEO from '../components/SEO';
 import AdsterraAd from '../AdsterraAd';
 

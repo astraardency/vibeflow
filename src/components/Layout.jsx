@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, ArrowUp } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     if (localStorage.getItem('vibeflow-theme') === 'dark') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsDarkMode(true);
       document.body.classList.add('dark-theme');
     }
@@ -20,6 +21,7 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     // Close mobile menu on route change
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMobileMenuOpen(false);
     // Scroll to top on route change
     window.scrollTo(0, 0);

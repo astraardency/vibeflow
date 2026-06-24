@@ -1,5 +1,5 @@
-import React from 'react';
-import { Download, Headphones, Music, Search, List, Share2, Database, Star } from 'lucide-react';
+
+import { Download, Headphones, Music, Search, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import AdsterraAd from '../AdsterraAd';
