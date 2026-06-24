@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function AdsterraAd({ type, adKey, width, height }) {
   const nativeRef = useRef(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // Inject Native Ad script dynamically
@@ -15,6 +16,19 @@ export default function AdsterraAd({ type, adKey, width, height }) {
     }
   }, [type]);
 
+  useEffect(() => {
+    // Listen for messages from the banner iframe
+    if (type !== 'native') {
+      const handleMessage = (event) => {
+        if (event.data && event.data.type === 'AD_LOADED' && event.data.key === adKey) {
+          setIsLoaded(true);
+        }
+      };
+      window.addEventListener('message', handleMessage);
+      return () => window.removeEventListener('message', handleMessage);
+    }
+  }, [type, adKey]);
+
   if (type === 'native') {
     return (
       <div className="ad-container" style={{ display: 'flex', justifyContent: 'center', margin: '20px 0', width: '100%' }}>
@@ -23,9 +37,21 @@ export default function AdsterraAd({ type, adKey, width, height }) {
     );
   }
 
-  // Banner Ads use iframe to avoid document.write issues, and have fixed heights
+  // Banner Ads use iframe. Starts with height 0 to hide blank spaces.
   return (
-    <div className="ad-container" style={{ display: 'flex', justifyContent: 'center', margin: '20px 0', width: '100%', overflowX: 'auto' }}>
+    <div 
+      className="ad-container" 
+      style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        margin: isLoaded ? '20px 0' : '0', 
+        width: '100%', 
+        overflowX: 'auto',
+        height: isLoaded ? `${height}px` : '0px',
+        opacity: isLoaded ? 1 : 0,
+        transition: 'all 0.3s ease-in-out'
+      }}
+    >
       <iframe 
         title={`Ad ${width}x${height}`}
         src={`/ad.html?key=${adKey}&width=${width}&height=${height}`}

@@ -20,24 +20,38 @@
     const urlParams = new URLSearchParams(window.location.search);
     const type = urlParams.get('type');
     
-    if (type === 'native') {
-      document.write('<script async="async" data-cfasync="false" src="https://pl29879136.effectivecpmnetwork.com/8455a8683ada6701da13e3ed06fd93f9/invoke.js"><\\/script>');
-      document.write('<div id="container-8455a8683ada6701da13e3ed06fd93f9"></div>');
-    } else {
-      const adKey = urlParams.get('key');
-      const adWidth = urlParams.get('width');
-      const adHeight = urlParams.get('height');
+    // We only use ad.html for Banners now, Native is handled in React.
+    const adKey = urlParams.get('key');
+    const adWidth = urlParams.get('width');
+    const adHeight = urlParams.get('height');
+    
+    window.atOptions = {
+      'key' : adKey,
+      'format' : 'iframe',
+      'height' : parseInt(adHeight),
+      'width' : parseInt(adWidth),
+      'params' : {}
+    };
+    
+    document.write('<script src="https://www.highperformanceformat.com/' + adKey + '/invoke.js"><\\/script>');
+  </script>
+
+  <script>
+    // Continuously check if the ad has rendered something
+    let checks = 0;
+    const interval = setInterval(() => {
+      const iframes = document.getElementsByTagName('iframe');
+      // If Adsterra injected an iframe, it means the ad loaded
+      if (iframes.length > 0) {
+        window.parent.postMessage({ type: 'AD_LOADED', key: adKey }, '*');
+        clearInterval(interval);
+      }
       
-      window.atOptions = {
-        'key' : adKey,
-        'format' : 'iframe',
-        'height' : parseInt(adHeight),
-        'width' : parseInt(adWidth),
-        'params' : {}
-      };
-      
-      document.write('<script src="https://www.highperformanceformat.com/' + adKey + '/invoke.js"><\\/script>');
-    }
+      checks++;
+      if (checks > 10) { // Give up after 5 seconds
+        clearInterval(interval);
+      }
+    }, 500);
   </script>
 </body>
 </html>
