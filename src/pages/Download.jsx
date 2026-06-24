@@ -96,6 +96,14 @@ export default function DownloadPage() {
                 <p style={{ marginTop: '1.5rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                   Version 1.0.0 • Size: ~15MB • Safe & Secure
                 </p>
+
+                {/* Security Trust Note */}
+                <div style={{ marginTop: '1.5rem', padding: '1rem', background: '#fffbeb', borderRadius: '8px', border: '1px solid #fcd34d', textAlign: 'left' }}>
+                  <p style={{ fontSize: '0.85rem', color: '#92400e', margin: 0, display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: '1.4' }}>
+                    <Shield size={16} color="#d97706" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span><strong>Note:</strong> Your browser may show a "File might be harmful" warning. This is a standard security message for apps downloaded outside the Play Store. It is 100% safe to click <strong>"Download anyway"</strong>.</span>
+                  </p>
+                </div>
               </div>
             </div>
 
