@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Download, Zap, Headphones, Music, Shield, Menu, X, Search, List, Heart, Share2, Cloud, Database, Shuffle, SkipBack, Pause, SkipForward, Repeat, Sun, Moon, ArrowUp, Star } from 'lucide-react';
 import './index.css';
+import AdsterraAd from './AdsterraAd';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -100,6 +101,9 @@ function App() {
         </div>
       </section>
 
+      {/* Ad: Native Banner */}
+      <AdsterraAd type="native" />
+
       {/* Features Section */}
       <section id="features" className="features">
         <div className="container">
@@ -165,6 +169,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Ad: 300x250 */}
+      <AdsterraAd adKey="b06c26d7d008ec675847a73837f673ab" width={300} height={250} />
 
       {/* App Promo Image Section */}
       <section style={{ padding: '0 0 4rem', background: '#f8f9fa', textAlign: 'center' }}>
@@ -266,6 +273,9 @@ function App() {
         </div>
       </section>
 
+      {/* Ad: 320x50 (Mobile Optimized) */}
+      <AdsterraAd adKey="773197551afaac09044bf5573989a450" width={320} height={50} />
+
       {/* Download Section */}
       <section className="features" style={{ background: 'rgba(0,0,0,0.02)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
@@ -305,6 +315,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Ad: 728x90 (Desktop Optimized) */}
+      <AdsterraAd adKey="f280983cabbf665fd120d1942827dfb5" width={728} height={90} />
 
       {/* Footer */}
       <footer className="footer" style={{ padding: '4rem 0 2rem', background: '#0a0a0a', color: '#fff' }}>
