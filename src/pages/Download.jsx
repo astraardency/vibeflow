@@ -32,28 +32,25 @@ export default function DownloadPage() {
             
             <h2 style={{ marginBottom: '2rem' }}>Ready to Install?</h2>
             
-            <div style={{ marginBottom: '2rem' }}>
-              <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                Step 1: Click the button below to start your download.
+            <div style={{ marginBottom: '1rem' }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
+                Step 1: Please support us by viewing our sponsors.
               </p>
-              <a href="#download-final" className="btn btn-outline" style={{ display: 'inline-flex', width: 'auto' }}>
-                Scroll to Download Link ↓
-              </a>
             </div>
 
             {/* Specific Ad Placement: 300x250 Ad */}
-            <div style={{ margin: '2rem 0', padding: '1rem', background: '#f8f9fa', borderRadius: '15px' }}>
+            <div style={{ margin: '1rem 0 2rem 0', padding: '1rem', background: '#f8f9fa', borderRadius: '15px' }}>
               <p style={{ fontSize: '0.8rem', color: '#aaa', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Advertisement</p>
               <AdsterraAd adKey="b06c26d7d008ec675847a73837f673ab" width={300} height={250} />
             </div>
 
-            <div id="download-final" style={{ marginTop: '2rem' }}>
+            <div id="download-final">
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                Step 2: Download the APK file securely.
+                Step 2: Download your file.
               </p>
               <a href="/vibeflow-app.apk" download className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
                 <Download size={28} />
-                Download Now (APK)
+                Download APK
               </a>
               <p style={{ marginTop: '1rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                 Version 1.0.0 • Size: ~15MB • Safe & Secure

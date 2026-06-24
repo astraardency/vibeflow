@@ -23,7 +23,7 @@ export default function Home() {
             <div className="hero-actions">
               <Link to="/download" className="btn btn-primary">
                 <Download size={24} />
-                Download for Android
+                Get the App
               </Link>
               <a href="https://vibeflow-chi-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                 Open Web Player

@@ -57,9 +57,9 @@ export default function Features() {
             </div>
           </div>
 
-          {/* Ad: 300x250 */}
+          {/* Ad: 728x90 */}
           <div style={{ textAlign: 'center', margin: '4rem 0' }}>
-            <AdsterraAd adKey="b06c26d7d008ec675847a73837f673ab" width={300} height={250} />
+            <AdsterraAd adKey="f280983cabbf665fd120d1942827dfb5" width={728} height={90} />
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
