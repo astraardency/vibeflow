@@ -119,6 +119,7 @@ body {
 
 .hero {
   min-height: 100vh;
+  max-height: 900px;
   display: flex;
   align-items: center;
   position: relative;
