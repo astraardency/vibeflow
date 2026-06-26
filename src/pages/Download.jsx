@@ -1,11 +1,10 @@
 
-import { useState } from 'react';
-import { Download, Zap, Shield, Heart, CheckCircle2 } from 'lucide-react';
+
+import { Download, Zap, Shield, Heart } from 'lucide-react';
 import SEO from '../components/SEO';
 import AdsterraAd from '../AdsterraAd';
 
 export default function DownloadPage() {
-  const [showNotification, setShowNotification] = useState(false);
   const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://astravibeflow.dpdns.org/download';
   
   const shareLinks = {
@@ -18,10 +17,6 @@ export default function DownloadPage() {
   const handleDownload = (e) => {
     e.preventDefault();
     
-    // Show download notification immediately on the website
-    setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 4000);
-    
     // ACTION 1: Trigger the APK download immediately.
     // This ensures the App downloads FIRST without any interruptions.
     window.location.href = '/vibeflow-app.apk';
@@ -33,38 +28,6 @@ export default function DownloadPage() {
         title="Download Vibeflow APK" 
         description="Download the latest version of Vibeflow for Android. The best free, open audio streaming app with zero interruptions."
       />
-      
-      {/* Top Notification */}
-      {showNotification && (
-        <div style={{
-          position: 'fixed',
-          top: '20px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          background: '#10B981', // Tailwind emerald-500
-          color: 'white',
-          padding: '12px 24px',
-          borderRadius: '50px',
-          boxShadow: '0 10px 25px rgba(16, 185, 129, 0.4)',
-          zIndex: 9999,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '10px',
-          fontWeight: '500',
-          animation: 'slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-        }}>
-          <CheckCircle2 size={20} />
-          <span>Download started! Check your notification panel.</span>
-        </div>
-      )}
-
-      {/* Add a simple animation style to the page for the notification */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes slideDown {
-          0% { transform: translate(-50%, -100%); opacity: 0; }
-          100% { transform: translate(-50%, 0); opacity: 1; }
-        }
-      `}} />
 
       <section className="features" style={{ paddingTop: '2rem' }}>
         <div className="container" style={{ textAlign: 'center' }}>
