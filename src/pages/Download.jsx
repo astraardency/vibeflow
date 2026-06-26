@@ -91,7 +91,7 @@ export default function DownloadPage() {
                   Download APK
                 </button>
                 <p style={{ marginTop: '1.5rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                  Version 1.0.0 • Size: ~15MB • Safe & Secure
+                  Version 1.0.0 • Size: ~35MB • Safe & Secure
                 </p>
 
                 {/* Security Trust Note */}
